@@ -112,6 +112,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="basic_types.h" />
+    <ClInclude Include="memory_routines.h" />
     <ClInclude Include="registers.h" />
   </ItemGroup>
   <ItemGroup>

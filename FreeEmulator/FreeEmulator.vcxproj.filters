@@ -18,6 +18,12 @@
     <ClInclude Include="registers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="memory_routines.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="basic_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
