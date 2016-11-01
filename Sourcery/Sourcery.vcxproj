@@ -134,6 +134,7 @@
     <ClCompile Include="memory_routines.c" />
     <ClCompile Include="registers.c" />
     <ClCompile Include="runme.c" />
+    <ClCompile Include="scratchpad.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

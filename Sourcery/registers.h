@@ -48,4 +48,44 @@ void
 registers_add_reg ( registers * p_regs, word reg_dest, word reg_source );
 
 void
-registers_initialize ( registers * p_registers );
+registers_initialize ( registers * p_regs );
+
+byte
+get_carry_flag ( registers *p_regs );
+
+#define registers_flags_carry_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 0))
+#define registers_flags_parity_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 2))
+#define registers_flags_af_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 4))
+#define registers_flags_zero_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 6))
+#define registers_flags_sign_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 7))
+#define registers_flags_single_step_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 8))
+#define registers_flags_interrupt_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 9))
+#define registers_flags_direction_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 10))
+#define registers_flags_overflow_retrieve(p_regs) (flags_retrieve_word(p_regs->flags, 11))
+
+void
+registers_flags_carry_set ( registers * p_regs );
+
+void
+registers_flags_parity_set ( registers * p_regs );
+
+void
+registers_flags_af_set ( registers * p_regs );
+
+void
+registers_flags_zero_set ( registers * p_regs );
+
+void
+registers_flags_sign_set ( registers * p_regs );
+
+void
+registers_flags_single_step_set ( registers * p_regs );
+
+void
+registers_flags_interrupt_set ( registers * p_regs );
+
+void
+registers_flags_direction_set ( registers * p_regs );
+
+void
+registers_flags_overflow_set ( registers * p_regs );

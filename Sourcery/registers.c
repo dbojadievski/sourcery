@@ -1,6 +1,7 @@
 #pragma once
 
 #include "registers.h"
+#include "memory_routines.h"
 
 void
 registers_mov_reg ( registers * p_regs, word reg_dest, word reg_source )
@@ -209,8 +210,6 @@ registers_initialize ( registers * p_registers )
 
 	assert ( ( p_registers->cl - p_registers->ch ) == -1 );
 
-
-
 	p_registers->dh											= most_significant_byte ( &( p_registers->dx ), sizeof ( p_registers->dx ) );
 
 	p_registers->dl											= least_significant_byte ( &( p_registers->dx ) );
@@ -222,3 +221,72 @@ registers_initialize ( registers * p_registers )
 
 
 }
+
+void
+registers_flags_carry_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 0 );
+}
+
+void
+registers_flags_parity_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 2 );
+}
+
+void
+registers_flags_af_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 4 );
+}
+
+void
+registers_flags_zero_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 6 );
+}
+
+void
+registers_flags_sign_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 7 );
+}
+
+void
+registers_flags_single_step_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 8 );
+}
+
+void
+registers_flags_interrupt_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 9 );
+}
+
+void
+registers_flags_direction_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 10 );
+}
+
+void
+registers_flags_overflow_set ( registers * p_regs )
+{
+	assert ( p_regs );
+	flags_set_word ( &(p_regs->flags), 11 );
+}
+
+
+
+
+
+

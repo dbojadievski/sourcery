@@ -1,7 +1,7 @@
 #include "basic_types.h"
 #include <assert.h>
 #include <stdio.h>
-
+#include <math.h>
 byte *
 least_significant_byte ( void * p_memory )
 {
@@ -23,6 +23,45 @@ most_significant_byte ( void * p_memory, size_t size )
 	p_most_significant = p_most_significant + ( size - 1 );
 
 	return p_most_significant;
+}
+
+byte
+flags_retrieve_byte ( byte p_flag, byte pos )
+{
+	assert ( pos >= 0 && pos <= 7);
+	byte value		= 0;
+
+	byte to_or		= ( 0b00000000 | pos );
+
+	value			= ( ( p_flag & to_or ) != 0 );
+	return value;
+}
+
+byte
+flags_retrieve_word ( word p_flags, byte pos )
+{
+	assert ( pos >= 0 && pos <= 15 );
+	byte value = 0;
+
+	byte to_or = ( 0b0000000000000000 | pos );
+	value = ( ( p_flags | to_or ) != 0 );
+	return value;
+}
+
+void
+flags_set_byte ( byte * p_flag, byte pos )
+{
+	assert ( pos >= 0 && pos <= 7 );
+	byte to_mul		= pow ( 2, pos );
+	*p_flag			= ( *p_flag | to_mul );
+}
+
+void
+flags_set_word ( word * p_flag, byte pos )
+{
+	assert ( pos >= 0 && pos <= 15 );
+	word to_mul			= pow ( 2, pos );
+	*p_flag = ( *p_flag | to_mul );
 }
 
 void

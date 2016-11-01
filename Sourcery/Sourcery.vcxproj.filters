@@ -35,5 +35,8 @@
     <ClCompile Include="registers.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scratchpad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
