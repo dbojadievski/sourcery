@@ -41,10 +41,10 @@ byte
 flags_retrieve_word ( word p_flags, byte pos )
 {
 	assert ( pos >= 0 && pos <= 15 );
-	byte value = 0;
+	byte value		= 0;
 
-	byte to_or = ( 0b0000000000000000 | pos );
-	value = ( ( p_flags | to_or ) != 0 );
+	byte to_or		= ( 0b0000000000000000 | pos );
+	value			= ( ( p_flags | to_or ) != 0 );
 	return value;
 }
 
@@ -78,5 +78,21 @@ memory_set ( void * p_memory, byte value, size_t size )
 	{
 		*p_curr = value;
 		p_curr = p_curr + sizeof ( byte );
+	}
+}
+
+void
+memory_set_buffer ( void * p_memory, void * p_set_to, size_t size )
+{
+	assert ( p_memory );
+	assert ( p_set_to );
+	assert ( size );
+
+	byte * p_buff_to_set				= ( byte * ) p_memory;
+	byte * p_buff_set_to				= ( byte * ) p_set_to;
+
+	for ( size_t curr_byte_idx			= 0; curr_byte_idx < size; curr_byte_idx++ )
+	{
+		p_buff_to_set [ curr_byte_idx ] = p_buff_set_to [ curr_byte_idx ];
 	}
 }

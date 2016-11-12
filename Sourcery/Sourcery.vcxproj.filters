@@ -24,6 +24,21 @@
     <ClInclude Include="memory_routines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="memory_chip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core_err_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory_stick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BIOS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="computer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_routines.c">
@@ -36,6 +51,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="scratchpad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory_chip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory_stick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BIOS.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="computer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

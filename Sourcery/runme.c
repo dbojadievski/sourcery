@@ -1,8 +1,8 @@
 #include "basic_types.h"
 #include "memory_routines.h"
 #include "registers.h"
+#include "memory_stick.h"
 #include <stdlib.h>
-
 void main ( void )
 {
 
@@ -33,4 +33,8 @@ void main ( void )
 	registers_flags_carry_set( &register_file );
 	is_set		= flags_retrieve_word ( register_file.flags, 0 );
 	assert ( is_set );
+
+	memory_stick main_stick;
+	memory_stick_initialize ( &main_stick, 4 );
+	assert ( main_stick.p_chips );
 }
