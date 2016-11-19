@@ -7,6 +7,7 @@ typedef dword mem_refresh_rate;
 #define MEM_CHIP_REFRESH_RATE 10000
 #define MEM_CHIP_BLOCK_SIZE 4
 #define MEM_CHIP_BLOCK_COUNT 256
+#define MEM_CHIP_CAPACITY ( MEM_CHIP_BLOCK_SIZE * MEM_CHIP_BLOCK_COUNT )
 
 typedef struct
 /* Used for both DRAM and SRAM. */

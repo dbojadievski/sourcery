@@ -2,6 +2,12 @@
 #include "basic_types.h"
 #include <stdio.h>
 
+byte
+memory_get_byte ( void * p_memory, dword idx );
+
+void
+memory_set_byte ( void * p_memory, dword idx, byte val );
+
 byte *
 least_significant_byte ( void * p_memory );
 

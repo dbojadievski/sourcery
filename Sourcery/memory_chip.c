@@ -14,7 +14,7 @@ memory_chip_initialize ( memory_chip * p_chip, mem_refresh_rate refesh_rate, byt
 
 	p_chip->refresh_rate				= 0;
 	p_chip->block_count					= block_count;
-	p_chip->block_count					= block_size;
+	p_chip->block_size					= block_size;
 
 	p_chip->p_storage					= ( byte * ) malloc ( sizeof ( byte ) * ( block_count * block_size ) );
 	assert ( p_chip->p_storage );
