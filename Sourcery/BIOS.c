@@ -27,7 +27,7 @@ bios_memory_read ( memory_stick * p_mem_stick, dword addr, dword * p_mem_value )
 	else if ( ( start_idx + sizeof ( dword ) ) >= storage_per_chip )
 		/* Note(Dino): Edge case, reading across 2 chips. */
 	{
-		if ( chip_idx + 2 < p_mem_stick->num_chips ) // What if there is no chip we can spill the data to?
+		if ( chip_idx + 1 >= p_mem_stick->num_chips ) // What if there is no chip we can spill the data to?
 			goto end;
 		
 		dword size_to_read_total			= sizeof ( *p_mem_value );
@@ -36,8 +36,11 @@ bios_memory_read ( memory_stick * p_mem_stick, dword addr, dword * p_mem_value )
 		/* Note(Dino): read the first chip. */
 		dword bytes_on_first_chip			= ( storage_per_chip - start_idx );
 		byte * p_buffer						= ( byte * ) ( p_chip->p_storage + start_idx );
-		for ( byte curr_byte_idx			= 0; curr_byte_idx < bytes_on_first_chip; curr_byte_idx++ )
+		for ( byte curr_byte_idx = 0; curr_byte_idx < bytes_on_first_chip; curr_byte_idx++ )
+		{
 			p_read_buffer [ curr_byte_idx ]	= p_buffer [ curr_byte_idx ];
+			printf ( "Read: %d\n", p_buffer [ curr_byte_idx ] );
+		}
 
 		/* Note(Dino): read the second chip. */
 		p_buffer							= p_mem_stick->p_chips [ chip_idx + 1 ]->p_storage;
@@ -46,6 +49,7 @@ bios_memory_read ( memory_stick * p_mem_stick, dword addr, dword * p_mem_value )
 			p_read_buffer [ curr_byte_idx ]	= p_buffer [ curr_byte_idx - bytes_on_first_chip ];
 			byte val						= p_read_buffer [ curr_byte_idx ];
 			byte x							= val;
+			printf ( "Read: %d\n", p_buffer [ curr_byte_idx ] );
 			x++;
 		}
 	}
@@ -84,7 +88,7 @@ bios_memory_write ( memory_stick * p_mem_stick, dword addr, dword to_write )
 	else if ( ( start_idx + sizeof ( to_write ) ) >= storage_per_chip )
 	/*Note(Dino): Edge-case, writing across 2 chips. */
 	{
-		if ( chip_idx + 2 < p_mem_stick->num_chips ) // What if there is no chip we can spill the data to?
+		if ( chip_idx + 1 >= p_mem_stick->num_chips ) // What if there is no chip we can spill the data to? We need at least the current one and a next one to be available.
 			goto end;
 
 		/* Note(Dino): Write to the first chip. */
@@ -108,10 +112,10 @@ bios_memory_write ( memory_stick * p_mem_stick, dword addr, dword to_write )
 		assert ( p_chip );
 		assert ( p_chip->p_storage );
 		p_buffer						= p_chip->p_storage;
-		for ( dword idx = bytes_on_first_chip; idx < sizeof ( to_write ); idx++ )
+		for ( dword currByteIdx			= bytes_on_first_chip; currByteIdx < sizeof ( to_write ); currByteIdx++ )
 		{
-			p_chip->p_storage [ idx - bytes_on_first_chip ] = p_to_write [ idx ];
-			printf ( "Wrote: %d\n", p_to_write [ idx ] );
+			p_chip->p_storage [ currByteIdx - bytes_on_first_chip ] = p_to_write [ currByteIdx ];
+			printf ( "Wrote: %d\n", p_to_write [ currByteIdx ] );
 		}
 	}
 	else

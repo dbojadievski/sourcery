@@ -4,7 +4,12 @@
 #include "memory_stick.h"
 #include "BIOS.h"
 #include <stdlib.h>
-void main ( void )
+
+void test_bios_memory ( void );
+void test_register_file_initialization ( void );
+
+void 
+main ( void )
 {
 
 	/* 
@@ -17,7 +22,8 @@ void main ( void )
 
 }
 
-void test_register_file_initialization ( void )
+void 
+test_register_file_initialization ( )
 {
 	byte * p_buffer						= ( byte * ) malloc ( 512 );
 	memory_zero ( p_buffer, 512 );
@@ -43,14 +49,14 @@ void test_register_file_initialization ( void )
 	assert ( is_set );
 }
 
-void test_bios_memory ( void )
+void 
+test_bios_memory ( void )
 {
 	memory_stick main_stick;
 	memory_stick_initialize ( &main_stick, 4 );
 	assert ( main_stick.p_chips );
 
 	bios_memory_write ( &main_stick, 0, 1 );
-
 
 	CORE_ERR_CODE err;
 	dword mem_buff						= 0xDEADC0DE;
@@ -73,9 +79,9 @@ void test_bios_memory ( void )
 	assert ( !err );
 	assert ( mem_buff_3 == 0xDEADC0DE );
 
-	/* This one is across chips. */
+	/* This one is across chips. It writes 2 bytes to the first chip, and 2 bytes to the second one. */
 	dword mem_buff_4					= 0;
-	dword last_addr_at_first_chip		= ( MEM_CHIP_CAPACITY - 1 );
+	dword last_addr_at_first_chip		= ( MEM_CHIP_CAPACITY - 2 );
 	err									= bios_memory_write ( &main_stick, last_addr_at_first_chip, 0xDEADC0DE );
 	assert ( !err );
 	err									= bios_memory_read ( &main_stick, last_addr_at_first_chip, &mem_buff_4 );
