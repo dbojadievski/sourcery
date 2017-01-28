@@ -35,20 +35,20 @@ _curr_chip_idx$1 = -4					; size = 4
 _p_mem_stick$ = 8					; size = 4
 _memory_stick_free PROC
 ; File c:\users\dboja\documents\visual studio 2015\projects\sourcery\sourcery\memory_stick.c
-; Line 45
+; Line 46
 	push	ebp
 	mov	ebp, esp
 	push	ecx
-; Line 46
+; Line 47
 	cmp	DWORD PTR _p_mem_stick$[ebp], 0
 	jne	SHORT $LN6@memory_sti
-	push	46					; 0000002eH
+	push	47					; 0000002fH
 	push	OFFSET $SG3008
 	push	OFFSET $SG3009
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN6@memory_sti:
-; Line 47
+; Line 48
 	mov	DWORD PTR _curr_chip_idx$1[ebp], 0
 	jmp	SHORT $LN4@memory_sti
 $LN2@memory_sti:
@@ -60,7 +60,7 @@ $LN4@memory_sti:
 	movzx	eax, BYTE PTR [edx]
 	cmp	DWORD PTR _curr_chip_idx$1[ebp], eax
 	jae	SHORT $LN1@memory_sti
-; Line 48
+; Line 49
 	mov	ecx, DWORD PTR _p_mem_stick$[ebp]
 	mov	edx, DWORD PTR [ecx+4]
 	mov	eax, DWORD PTR _curr_chip_idx$1[ebp]
@@ -70,7 +70,7 @@ $LN4@memory_sti:
 	add	esp, 4
 	jmp	SHORT $LN2@memory_sti
 $LN1@memory_sti:
-; Line 49
+; Line 50
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -123,7 +123,7 @@ $LN4@memory_sti:
 	movzx	eax, BYTE PTR _curr_chip_idx$2[ebp]
 	movzx	ecx, BYTE PTR _num_chips$[ebp]
 	cmp	eax, ecx
-	jge	SHORT $LN1@memory_sti
+	jge	SHORT $LN3@memory_sti
 ; Line 20
 	push	16					; 00000010H
 	call	_malloc
@@ -147,7 +147,7 @@ $LN4@memory_sti:
 	or	eax, 1
 	mov	DWORD PTR _err_code$[ebp], eax
 ; Line 26
-	jmp	SHORT $LN1@memory_sti
+	jmp	SHORT $LN3@memory_sti
 ; Line 27
 	jmp	SHORT $LN8@memory_sti
 $LN7@memory_sti:
@@ -166,12 +166,14 @@ $LN5@memory_sti:
 	or	eax, 1
 	mov	DWORD PTR _err_code$[ebp], eax
 ; Line 37
-	jmp	SHORT $LN1@memory_sti
+	jmp	SHORT $LN3@memory_sti
 $LN6@memory_sti:
 ; Line 39
 	jmp	SHORT $LN2@memory_sti
-$LN1@memory_sti:
+$LN3@memory_sti:
 ; Line 41
+	mov	eax, DWORD PTR _err_code$[ebp]
+; Line 42
 	mov	esp, ebp
 	pop	ebp
 	ret	0

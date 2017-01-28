@@ -10,94 +10,88 @@ INCLUDELIB LIBCMT
 INCLUDELIB OLDNAMES
 
 _DATA	SEGMENT
+$SG4654	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+	DB	00H, 00H
+	ORG $+2
+$SG4655	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
+	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, 00H, 00H
 $SG4656	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
 $SG4657	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
-	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, 00H, 00H
+	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, '-', 00H, '>'
+	DB	00H, 'n', 00H, 'u', 00H, 'm', 00H, '_', 00H, 'c', 00H, 'h', 00H
+	DB	'i', 00H, 'p', 00H, 's', 00H, 00H, 00H
+	ORG $+2
 $SG4658	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
 $SG4659	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
 	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, '-', 00H, '>'
-	DB	00H, 'n', 00H, 'u', 00H, 'm', 00H, '_', 00H, 'c', 00H, 'h', 00H
-	DB	'i', 00H, 'p', 00H, 's', 00H, 00H, 00H
+	DB	00H, 'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+	DB	's', 00H, 00H, 00H
 	ORG $+2
 $SG4660	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4661	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
-	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, '-', 00H, '>'
-	DB	00H, 'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
-	DB	's', 00H, 00H, 00H
-	ORG $+2
-$SG4662	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4661	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4663	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4667	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4669	DB	'Read: %d', 0aH, 00H
-	ORG $+2
-$SG4670	DB	'Read: %d', 0aH, 00H
-	ORG $+2
-$SG4671	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4668	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4672	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4669	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4673	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
-	DB	00H, 00H
-	ORG $+2
-$SG4674	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4670	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	'-', 00H, '>', 00H, 'p', 00H, '_', 00H, 's', 00H, 't', 00H, 'o'
 	DB	00H, 'r', 00H, 'a', 00H, 'g', 00H, 'e', 00H, 00H, 00H
-$SG4728	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4724	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4729	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
+$SG4725	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
 	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, 00H, 00H
-$SG4730	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4726	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4731	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
+$SG4727	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
 	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, '-', 00H, '>'
 	DB	00H, 'n', 00H, 'u', 00H, 'm', 00H, '_', 00H, 'c', 00H, 'h', 00H
 	DB	'i', 00H, 'p', 00H, 's', 00H, 00H, 00H
 	ORG $+2
-$SG4732	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4728	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4733	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
+$SG4729	DB	'p', 00H, '_', 00H, 'm', 00H, 'e', 00H, 'm', 00H, '_', 00H
 	DB	's', 00H, 't', 00H, 'i', 00H, 'c', 00H, 'k', 00H, '-', 00H, '>'
 	DB	00H, 'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	's', 00H, 00H, 00H
 	ORG $+2
-$SG4734	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4730	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4735	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4731	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+2
+$SG4737	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+	DB	00H, 00H
+	ORG $+2
+$SG4738	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+	DB	00H, 00H
+	ORG $+2
+$SG4739	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+	DB	00H, 00H
+	ORG $+2
+$SG4740	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+	DB	'-', 00H, '>', 00H, 'p', 00H, '_', 00H, 's', 00H, 't', 00H, 'o'
+	DB	00H, 'r', 00H, 'a', 00H, 'g', 00H, 'e', 00H, 00H, 00H
 $SG4741	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4742	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
-	DB	00H, 00H
-	ORG $+2
-$SG4743	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
-	DB	00H, 00H
-	ORG $+2
-$SG4744	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
-	DB	'-', 00H, '>', 00H, 'p', 00H, '_', 00H, 's', 00H, 't', 00H, 'o'
-	DB	00H, 'r', 00H, 'a', 00H, 'g', 00H, 'e', 00H, 00H, 00H
-$SG4745	DB	'Wrote: %d', 0aH, 00H
-	ORG $+1
-$SG4746	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
-	DB	00H, 00H
-	ORG $+6
-$SG4747	DB	'b', 00H, 'y', 00H, 't', 00H, 'e', 00H, 's', 00H, '_', 00H
+$SG4742	DB	'b', 00H, 'y', 00H, 't', 00H, 'e', 00H, 's', 00H, '_', 00H
 	DB	'o', 00H, 'n', 00H, '_', 00H, 'f', 00H, 'i', 00H, 'r', 00H, 's'
 	DB	00H, 't', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	' ', 00H, '+', 00H, ' ', 00H, 'b', 00H, 'y', 00H, 't', 00H, 'e'
@@ -108,45 +102,35 @@ $SG4747	DB	'b', 00H, 'y', 00H, 't', 00H, 'e', 00H, 's', 00H, '_', 00H
 	DB	00H, ' ', 00H, '(', 00H, ' ', 00H, 't', 00H, 'o', 00H, '_', 00H
 	DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H, ')'
 	DB	00H, 00H, 00H
-$SG4748	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4743	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4749	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4744	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4750	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4745	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4751	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4746	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	'-', 00H, '>', 00H, 'p', 00H, '_', 00H, 's', 00H, 't', 00H, 'o'
 	DB	00H, 'r', 00H, 'a', 00H, 'g', 00H, 'e', 00H, 00H, 00H
-$SG4752	DB	'Wrote: %d', 0aH, 00H
-	ORG $+1
-$SG4753	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4747	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4754	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4748	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4755	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
+$SG4749	DB	'B', 00H, 'I', 00H, 'O', 00H, 'S', 00H, '.', 00H, 'c', 00H
 	DB	00H, 00H
 	ORG $+2
-$SG4756	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
+$SG4750	DB	'p', 00H, '_', 00H, 'c', 00H, 'h', 00H, 'i', 00H, 'p', 00H
 	DB	'-', 00H, '>', 00H, 'p', 00H, '_', 00H, 's', 00H, 't', 00H, 'o'
 	DB	00H, 'r', 00H, 'a', 00H, 'g', 00H, 'e', 00H, 00H, 00H
 _DATA	ENDS
-PUBLIC	___local_stdio_printf_options
-PUBLIC	__vfprintf_l
-PUBLIC	_printf
 PUBLIC	_bios_memory_read
 PUBLIC	_bios_memory_write
-EXTRN	___acrt_iob_func:PROC
-EXTRN	___stdio_common_vfprintf:PROC
 EXTRN	_memory_set_buffer:PROC
 EXTRN	__wassert:PROC
-_DATA	SEGMENT
-COMM	?_OptionsStorage@?1??__local_stdio_printf_options@@9@9:QWORD							; `__local_stdio_printf_options'::`2'::_OptionsStorage
-_DATA	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
 _p_buffer$1 = -52					; size = 4
@@ -157,147 +141,147 @@ _p_to_write$4 = -36					; size = 4
 _p_buffer$5 = -32					; size = 4
 _start_idx$ = -28					; size = 4
 _storage_per_chip$ = -24				; size = 4
-_bytes_on_first_chip$6 = -20				; size = 4
-_chip_idx$ = -16					; size = 4
-_currByteIdx$7 = -12					; size = 4
-_idx$8 = -8						; size = 4
+_currByteIdx$6 = -20					; size = 4
+_bytes_on_first_chip$7 = -16				; size = 4
+_idx$8 = -12						; size = 4
+_chip_idx$ = -8						; size = 4
 _p_chip$ = -4						; size = 4
 _p_mem_stick$ = 8					; size = 4
 _addr$ = 12						; size = 4
 _to_write$ = 16						; size = 4
 _bios_memory_write PROC
 ; File c:\users\dboja\documents\visual studio 2015\projects\sourcery\sourcery\bios.c
-; Line 74
+; Line 65
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 52					; 00000034H
-; Line 75
+; Line 66
 	mov	DWORD PTR _err_code$[ebp], 0
-; Line 76
+; Line 67
 	cmp	DWORD PTR _p_mem_stick$[ebp], 0
 	jne	SHORT $LN14@bios_memor
-	push	76					; 0000004cH
-	push	OFFSET $SG4728
-	push	OFFSET $SG4729
+	push	67					; 00000043H
+	push	OFFSET $SG4724
+	push	OFFSET $SG4725
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN14@bios_memor:
-; Line 77
+; Line 68
 	mov	ecx, DWORD PTR _p_mem_stick$[ebp]
 	movzx	edx, BYTE PTR [ecx]
 	test	edx, edx
 	jne	SHORT $LN15@bios_memor
-	push	77					; 0000004dH
-	push	OFFSET $SG4730
-	push	OFFSET $SG4731
+	push	68					; 00000044H
+	push	OFFSET $SG4726
+	push	OFFSET $SG4727
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN15@bios_memor:
-; Line 78
+; Line 69
 	mov	ecx, DWORD PTR _p_mem_stick$[ebp]
 	cmp	DWORD PTR [ecx+4], 0
 	jne	SHORT $LN16@bios_memor
-	push	78					; 0000004eH
-	push	OFFSET $SG4732
-	push	OFFSET $SG4733
+	push	69					; 00000045H
+	push	OFFSET $SG4728
+	push	OFFSET $SG4729
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN16@bios_memor:
-; Line 80
+; Line 71
 	mov	eax, 4
 	imul	ecx, eax, 0
 	mov	edx, DWORD PTR _p_mem_stick$[ebp]
 	mov	eax, DWORD PTR [edx+4]
 	mov	ecx, DWORD PTR [ecx+eax]
 	mov	DWORD PTR _p_chip$[ebp], ecx
-; Line 81
+; Line 72
 	cmp	DWORD PTR _p_chip$[ebp], 0
 	jne	SHORT $LN17@bios_memor
-	push	81					; 00000051H
-	push	OFFSET $SG4734
-	push	OFFSET $SG4735
+	push	72					; 00000048H
+	push	OFFSET $SG4730
+	push	OFFSET $SG4731
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN17@bios_memor:
-; Line 82
+; Line 73
 	mov	eax, DWORD PTR _p_chip$[ebp]
 	movzx	ecx, BYTE PTR [eax+4]
 	mov	edx, DWORD PTR _p_chip$[ebp]
 	imul	ecx, DWORD PTR [edx+8]
 	mov	DWORD PTR _storage_per_chip$[ebp], ecx
-; Line 83
+; Line 74
 	mov	eax, DWORD PTR _addr$[ebp]
 	xor	edx, edx
 	div	DWORD PTR _storage_per_chip$[ebp]
 	mov	DWORD PTR _chip_idx$[ebp], eax
-; Line 85
+; Line 76
 	mov	eax, DWORD PTR _chip_idx$[ebp]
 	imul	eax, DWORD PTR _storage_per_chip$[ebp]
 	mov	ecx, DWORD PTR _addr$[ebp]
 	sub	ecx, eax
 	mov	DWORD PTR _start_idx$[ebp], ecx
-; Line 86
+; Line 77
 	mov	edx, DWORD PTR _p_mem_stick$[ebp]
 	movzx	eax, BYTE PTR [edx]
 	cmp	DWORD PTR _chip_idx$[ebp], eax
 	jb	SHORT $LN8@bios_memor
-; Line 87
+; Line 78
 	mov	DWORD PTR _err_code$[ebp], 2
 	jmp	$end$25
 $LN8@bios_memor:
-; Line 88
+; Line 79
 	mov	ecx, DWORD PTR _start_idx$[ebp]
 	add	ecx, 4
 	cmp	ecx, DWORD PTR _storage_per_chip$[ebp]
 	jb	$LN10@bios_memor
-; Line 91
+; Line 82
 	mov	edx, DWORD PTR _chip_idx$[ebp]
 	add	edx, 1
 	mov	eax, DWORD PTR _p_mem_stick$[ebp]
 	movzx	ecx, BYTE PTR [eax]
 	cmp	edx, ecx
 	jb	SHORT $LN12@bios_memor
-; Line 92
+; Line 83
 	jmp	$end$25
 $LN12@bios_memor:
-; Line 95
+; Line 86
 	mov	edx, DWORD PTR _storage_per_chip$[ebp]
 	sub	edx, DWORD PTR _start_idx$[ebp]
-	mov	DWORD PTR _bytes_on_first_chip$6[ebp], edx
-; Line 97
+	mov	DWORD PTR _bytes_on_first_chip$7[ebp], edx
+; Line 88
 	mov	eax, DWORD PTR _p_mem_stick$[ebp]
 	mov	ecx, DWORD PTR [eax+4]
 	mov	edx, DWORD PTR _chip_idx$[ebp]
 	mov	eax, DWORD PTR [ecx+edx*4]
 	mov	DWORD PTR _p_chip$[ebp], eax
-; Line 98
+; Line 89
 	cmp	DWORD PTR _p_chip$[ebp], 0
 	jne	SHORT $LN18@bios_memor
-	push	98					; 00000062H
-	push	OFFSET $SG4741
-	push	OFFSET $SG4742
+	push	89					; 00000059H
+	push	OFFSET $SG4737
+	push	OFFSET $SG4738
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN18@bios_memor:
-; Line 99
+; Line 90
 	mov	edx, DWORD PTR _p_chip$[ebp]
 	cmp	DWORD PTR [edx+12], 0
 	jne	SHORT $LN19@bios_memor
-	push	99					; 00000063H
-	push	OFFSET $SG4743
-	push	OFFSET $SG4744
+	push	90					; 0000005aH
+	push	OFFSET $SG4739
+	push	OFFSET $SG4740
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN19@bios_memor:
-; Line 100
+; Line 91
 	mov	ecx, DWORD PTR _p_chip$[ebp]
 	mov	edx, DWORD PTR [ecx+12]
 	add	edx, DWORD PTR _start_idx$[ebp]
 	mov	DWORD PTR _p_buffer$5[ebp], edx
-; Line 101
+; Line 92
 	lea	eax, DWORD PTR _to_write$[ebp]
 	mov	DWORD PTR _p_to_write$4[ebp], eax
-; Line 102
+; Line 93
 	mov	DWORD PTR _idx$8[ebp], 0
 	jmp	SHORT $LN4@bios_memor
 $LN2@bios_memor:
@@ -306,149 +290,131 @@ $LN2@bios_memor:
 	mov	DWORD PTR _idx$8[ebp], ecx
 $LN4@bios_memor:
 	mov	edx, DWORD PTR _idx$8[ebp]
-	cmp	edx, DWORD PTR _bytes_on_first_chip$6[ebp]
+	cmp	edx, DWORD PTR _bytes_on_first_chip$7[ebp]
 	jae	SHORT $LN3@bios_memor
-; Line 104
+; Line 94
 	mov	eax, DWORD PTR _p_buffer$5[ebp]
 	add	eax, DWORD PTR _idx$8[ebp]
 	mov	ecx, DWORD PTR _p_to_write$4[ebp]
 	add	ecx, DWORD PTR _idx$8[ebp]
 	mov	dl, BYTE PTR [ecx]
 	mov	BYTE PTR [eax], dl
-; Line 105
-	mov	eax, DWORD PTR _p_buffer$5[ebp]
-	add	eax, DWORD PTR _idx$8[ebp]
-	movzx	ecx, BYTE PTR [eax]
-	push	ecx
-	push	OFFSET $SG4745
-	call	_printf
-	add	esp, 8
-; Line 106
 	jmp	SHORT $LN2@bios_memor
 $LN3@bios_memor:
-; Line 109
-	mov	edx, 4
-	sub	edx, DWORD PTR _bytes_on_first_chip$6[ebp]
-	mov	DWORD PTR _bytes_on_second_chip$3[ebp], edx
-; Line 110
-	mov	eax, DWORD PTR _bytes_on_first_chip$6[ebp]
-	add	eax, DWORD PTR _bytes_on_second_chip$3[ebp]
-	cmp	eax, 4
+; Line 97
+	mov	eax, 4
+	sub	eax, DWORD PTR _bytes_on_first_chip$7[ebp]
+	mov	DWORD PTR _bytes_on_second_chip$3[ebp], eax
+; Line 98
+	mov	ecx, DWORD PTR _bytes_on_first_chip$7[ebp]
+	add	ecx, DWORD PTR _bytes_on_second_chip$3[ebp]
+	cmp	ecx, 4
 	je	SHORT $LN20@bios_memor
-	push	110					; 0000006eH
-	push	OFFSET $SG4746
-	push	OFFSET $SG4747
+	push	98					; 00000062H
+	push	OFFSET $SG4741
+	push	OFFSET $SG4742
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN20@bios_memor:
-; Line 111
-	mov	edx, DWORD PTR _p_mem_stick$[ebp]
-	mov	eax, DWORD PTR [edx+4]
-	mov	ecx, DWORD PTR _chip_idx$[ebp]
-	mov	edx, DWORD PTR [eax+ecx*4+4]
-	mov	DWORD PTR _p_chip$[ebp], edx
-; Line 112
+; Line 99
+	mov	eax, DWORD PTR _p_mem_stick$[ebp]
+	mov	ecx, DWORD PTR [eax+4]
+	mov	edx, DWORD PTR _chip_idx$[ebp]
+	mov	eax, DWORD PTR [ecx+edx*4+4]
+	mov	DWORD PTR _p_chip$[ebp], eax
+; Line 100
 	cmp	DWORD PTR _p_chip$[ebp], 0
 	jne	SHORT $LN21@bios_memor
-	push	112					; 00000070H
-	push	OFFSET $SG4748
-	push	OFFSET $SG4749
+	push	100					; 00000064H
+	push	OFFSET $SG4743
+	push	OFFSET $SG4744
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN21@bios_memor:
-; Line 113
-	mov	ecx, DWORD PTR _p_chip$[ebp]
-	cmp	DWORD PTR [ecx+12], 0
+; Line 101
+	mov	edx, DWORD PTR _p_chip$[ebp]
+	cmp	DWORD PTR [edx+12], 0
 	jne	SHORT $LN22@bios_memor
-	push	113					; 00000071H
-	push	OFFSET $SG4750
-	push	OFFSET $SG4751
+	push	101					; 00000065H
+	push	OFFSET $SG4745
+	push	OFFSET $SG4746
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN22@bios_memor:
-; Line 114
-	mov	eax, DWORD PTR _p_chip$[ebp]
-	mov	ecx, DWORD PTR [eax+12]
-	mov	DWORD PTR _p_buffer$5[ebp], ecx
-; Line 115
-	mov	edx, DWORD PTR _bytes_on_first_chip$6[ebp]
-	mov	DWORD PTR _currByteIdx$7[ebp], edx
+; Line 102
+	mov	ecx, DWORD PTR _p_chip$[ebp]
+	mov	edx, DWORD PTR [ecx+12]
+	mov	DWORD PTR _p_buffer$5[ebp], edx
+; Line 103
+	mov	eax, DWORD PTR _bytes_on_first_chip$7[ebp]
+	mov	DWORD PTR _currByteIdx$6[ebp], eax
 	jmp	SHORT $LN7@bios_memor
 $LN5@bios_memor:
-	mov	eax, DWORD PTR _currByteIdx$7[ebp]
-	add	eax, 1
-	mov	DWORD PTR _currByteIdx$7[ebp], eax
+	mov	ecx, DWORD PTR _currByteIdx$6[ebp]
+	add	ecx, 1
+	mov	DWORD PTR _currByteIdx$6[ebp], ecx
 $LN7@bios_memor:
-	cmp	DWORD PTR _currByteIdx$7[ebp], 4
+	cmp	DWORD PTR _currByteIdx$6[ebp], 4
 	jae	SHORT $LN6@bios_memor
-; Line 117
-	mov	ecx, DWORD PTR _currByteIdx$7[ebp]
-	sub	ecx, DWORD PTR _bytes_on_first_chip$6[ebp]
-	mov	edx, DWORD PTR _p_chip$[ebp]
-	mov	eax, DWORD PTR [edx+12]
-	mov	edx, DWORD PTR _p_to_write$4[ebp]
-	add	edx, DWORD PTR _currByteIdx$7[ebp]
-	mov	dl, BYTE PTR [edx]
-	mov	BYTE PTR [eax+ecx], dl
-; Line 118
+; Line 104
+	mov	edx, DWORD PTR _currByteIdx$6[ebp]
+	sub	edx, DWORD PTR _bytes_on_first_chip$7[ebp]
+	mov	eax, DWORD PTR _p_chip$[ebp]
+	mov	ecx, DWORD PTR [eax+12]
 	mov	eax, DWORD PTR _p_to_write$4[ebp]
-	add	eax, DWORD PTR _currByteIdx$7[ebp]
-	movzx	ecx, BYTE PTR [eax]
-	push	ecx
-	push	OFFSET $SG4752
-	call	_printf
-	add	esp, 8
-; Line 119
+	add	eax, DWORD PTR _currByteIdx$6[ebp]
+	mov	al, BYTE PTR [eax]
+	mov	BYTE PTR [ecx+edx], al
 	jmp	SHORT $LN5@bios_memor
 $LN6@bios_memor:
-; Line 120
+; Line 105
 	jmp	SHORT $end$25
 $LN10@bios_memor:
-; Line 124
-	mov	edx, DWORD PTR _p_mem_stick$[ebp]
-	mov	eax, DWORD PTR [edx+4]
-	mov	ecx, DWORD PTR _chip_idx$[ebp]
-	mov	edx, DWORD PTR [eax+ecx*4]
-	mov	DWORD PTR _p_chip$[ebp], edx
-; Line 125
+; Line 109
+	mov	ecx, DWORD PTR _p_mem_stick$[ebp]
+	mov	edx, DWORD PTR [ecx+4]
+	mov	eax, DWORD PTR _chip_idx$[ebp]
+	mov	ecx, DWORD PTR [edx+eax*4]
+	mov	DWORD PTR _p_chip$[ebp], ecx
+; Line 110
 	cmp	DWORD PTR _p_chip$[ebp], 0
 	jne	SHORT $LN23@bios_memor
-	push	125					; 0000007dH
-	push	OFFSET $SG4753
-	push	OFFSET $SG4754
+	push	110					; 0000006eH
+	push	OFFSET $SG4747
+	push	OFFSET $SG4748
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN23@bios_memor:
-; Line 126
-	mov	ecx, DWORD PTR _p_chip$[ebp]
-	cmp	DWORD PTR [ecx+12], 0
+; Line 111
+	mov	eax, DWORD PTR _p_chip$[ebp]
+	cmp	DWORD PTR [eax+12], 0
 	jne	SHORT $LN24@bios_memor
-	push	126					; 0000007eH
-	push	OFFSET $SG4755
-	push	OFFSET $SG4756
+	push	111					; 0000006fH
+	push	OFFSET $SG4749
+	push	OFFSET $SG4750
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN24@bios_memor:
-; Line 128
-	mov	eax, DWORD PTR _p_chip$[ebp]
-	mov	ecx, DWORD PTR [eax+12]
-	add	ecx, DWORD PTR _start_idx$[ebp]
-	mov	DWORD PTR _p_buffer$1[ebp], ecx
-; Line 129
-	lea	edx, DWORD PTR _to_write$[ebp]
-	mov	DWORD PTR _p_to_write$2[ebp], edx
-; Line 130
+; Line 113
+	mov	edx, DWORD PTR _p_chip$[ebp]
+	mov	eax, DWORD PTR [edx+12]
+	add	eax, DWORD PTR _start_idx$[ebp]
+	mov	DWORD PTR _p_buffer$1[ebp], eax
+; Line 114
+	lea	ecx, DWORD PTR _to_write$[ebp]
+	mov	DWORD PTR _p_to_write$2[ebp], ecx
+; Line 115
 	push	4
-	mov	eax, DWORD PTR _p_to_write$2[ebp]
+	mov	edx, DWORD PTR _p_to_write$2[ebp]
+	push	edx
+	mov	eax, DWORD PTR _p_buffer$1[ebp]
 	push	eax
-	mov	ecx, DWORD PTR _p_buffer$1[ebp]
-	push	ecx
 	call	_memory_set_buffer
 	add	esp, 12					; 0000000cH
 $end$25:
-; Line 134
+; Line 119
 	mov	eax, DWORD PTR _err_code$[ebp]
-; Line 135
+; Line 120
 	mov	esp, ebp
 	pop	ebp
 	ret	0
@@ -460,16 +426,14 @@ _size_to_read_total$1 = -44				; size = 4
 _p_buffer$2 = -40					; size = 4
 _err_code$ = -36					; size = 4
 _p_read_buffer$3 = -32					; size = 4
-_bytes_on_first_chip$4 = -28				; size = 4
-_start_idx$ = -24					; size = 4
-_storage_per_chip$ = -20				; size = 4
-_chip_idx$ = -16					; size = 4
-_p_buffer$5 = -12					; size = 4
+_p_buffer$4 = -28					; size = 4
+_bytes_on_first_chip$5 = -24				; size = 4
+_start_idx$ = -20					; size = 4
+_storage_per_chip$ = -16				; size = 4
+_chip_idx$ = -12					; size = 4
 _p_chip$ = -8						; size = 4
-_val$6 = -4						; size = 1
-_x$7 = -3						; size = 1
-_curr_byte_idx$8 = -2					; size = 1
-_curr_byte_idx$9 = -1					; size = 1
+_curr_byte_idx$6 = -2					; size = 1
+_curr_byte_idx$7 = -1					; size = 1
 _p_mem_stick$ = 8					; size = 4
 _addr$ = 12						; size = 4
 _p_mem_value$ = 16					; size = 4
@@ -486,8 +450,8 @@ _bios_memory_read PROC
 	cmp	DWORD PTR _p_mem_stick$[ebp], 0
 	jne	SHORT $LN14@bios_memor
 	push	15					; 0000000fH
-	push	OFFSET $SG4656
-	push	OFFSET $SG4657
+	push	OFFSET $SG4654
+	push	OFFSET $SG4655
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN14@bios_memor:
@@ -497,8 +461,8 @@ $LN14@bios_memor:
 	test	edx, edx
 	jne	SHORT $LN15@bios_memor
 	push	16					; 00000010H
-	push	OFFSET $SG4658
-	push	OFFSET $SG4659
+	push	OFFSET $SG4656
+	push	OFFSET $SG4657
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN15@bios_memor:
@@ -507,8 +471,8 @@ $LN15@bios_memor:
 	cmp	DWORD PTR [ecx+4], 0
 	jne	SHORT $LN16@bios_memor
 	push	17					; 00000011H
-	push	OFFSET $SG4660
-	push	OFFSET $SG4661
+	push	OFFSET $SG4658
+	push	OFFSET $SG4659
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN16@bios_memor:
@@ -523,8 +487,8 @@ $LN16@bios_memor:
 	cmp	DWORD PTR _p_chip$[ebp], 0
 	jne	SHORT $LN17@bios_memor
 	push	20					; 00000014H
-	push	OFFSET $SG4662
-	push	OFFSET $SG4663
+	push	OFFSET $SG4660
+	push	OFFSET $SG4661
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN17@bios_memor:
@@ -577,223 +541,107 @@ $LN12@bios_memor:
 ; Line 37
 	mov	eax, DWORD PTR _storage_per_chip$[ebp]
 	sub	eax, DWORD PTR _start_idx$[ebp]
-	mov	DWORD PTR _bytes_on_first_chip$4[ebp], eax
+	mov	DWORD PTR _bytes_on_first_chip$5[ebp], eax
 ; Line 38
 	mov	ecx, DWORD PTR _p_chip$[ebp]
 	mov	edx, DWORD PTR [ecx+12]
 	add	edx, DWORD PTR _start_idx$[ebp]
-	mov	DWORD PTR _p_buffer$5[ebp], edx
+	mov	DWORD PTR _p_buffer$4[ebp], edx
 ; Line 39
-	mov	BYTE PTR _curr_byte_idx$8[ebp], 0
+	mov	BYTE PTR _curr_byte_idx$7[ebp], 0
 	jmp	SHORT $LN4@bios_memor
 $LN2@bios_memor:
-	mov	al, BYTE PTR _curr_byte_idx$8[ebp]
+	mov	al, BYTE PTR _curr_byte_idx$7[ebp]
 	add	al, 1
-	mov	BYTE PTR _curr_byte_idx$8[ebp], al
+	mov	BYTE PTR _curr_byte_idx$7[ebp], al
 $LN4@bios_memor:
-	movzx	ecx, BYTE PTR _curr_byte_idx$8[ebp]
-	cmp	ecx, DWORD PTR _bytes_on_first_chip$4[ebp]
+	movzx	ecx, BYTE PTR _curr_byte_idx$7[ebp]
+	cmp	ecx, DWORD PTR _bytes_on_first_chip$5[ebp]
 	jae	SHORT $LN3@bios_memor
-; Line 41
-	movzx	edx, BYTE PTR _curr_byte_idx$8[ebp]
-	movzx	eax, BYTE PTR _curr_byte_idx$8[ebp]
+; Line 40
+	movzx	edx, BYTE PTR _curr_byte_idx$7[ebp]
+	movzx	eax, BYTE PTR _curr_byte_idx$7[ebp]
 	mov	ecx, DWORD PTR _p_read_buffer$3[ebp]
-	mov	esi, DWORD PTR _p_buffer$5[ebp]
+	mov	esi, DWORD PTR _p_buffer$4[ebp]
 	mov	dl, BYTE PTR [esi+edx]
 	mov	BYTE PTR [ecx+eax], dl
-; Line 42
-	movzx	eax, BYTE PTR _curr_byte_idx$8[ebp]
-	mov	ecx, DWORD PTR _p_buffer$5[ebp]
-	movzx	edx, BYTE PTR [ecx+eax]
-	push	edx
-	push	OFFSET $SG4669
-	call	_printf
-	add	esp, 8
-; Line 43
 	jmp	SHORT $LN2@bios_memor
 $LN3@bios_memor:
-; Line 46
+; Line 43
 	mov	eax, DWORD PTR _p_mem_stick$[ebp]
 	mov	ecx, DWORD PTR [eax+4]
 	mov	edx, DWORD PTR _chip_idx$[ebp]
 	mov	eax, DWORD PTR [ecx+edx*4+4]
 	mov	ecx, DWORD PTR [eax+12]
-	mov	DWORD PTR _p_buffer$5[ebp], ecx
-; Line 47
-	mov	dl, BYTE PTR _bytes_on_first_chip$4[ebp]
-	mov	BYTE PTR _curr_byte_idx$9[ebp], dl
+	mov	DWORD PTR _p_buffer$4[ebp], ecx
+; Line 44
+	mov	dl, BYTE PTR _bytes_on_first_chip$5[ebp]
+	mov	BYTE PTR _curr_byte_idx$6[ebp], dl
 	jmp	SHORT $LN7@bios_memor
 $LN5@bios_memor:
-	mov	al, BYTE PTR _curr_byte_idx$9[ebp]
+	mov	al, BYTE PTR _curr_byte_idx$6[ebp]
 	add	al, 1
-	mov	BYTE PTR _curr_byte_idx$9[ebp], al
+	mov	BYTE PTR _curr_byte_idx$6[ebp], al
 $LN7@bios_memor:
-	movzx	ecx, BYTE PTR _curr_byte_idx$9[ebp]
+	movzx	ecx, BYTE PTR _curr_byte_idx$6[ebp]
 	cmp	ecx, 4
 	jae	SHORT $LN6@bios_memor
-; Line 49
-	movzx	edx, BYTE PTR _curr_byte_idx$9[ebp]
-	sub	edx, DWORD PTR _bytes_on_first_chip$4[ebp]
-	movzx	eax, BYTE PTR _curr_byte_idx$9[ebp]
+; Line 45
+	movzx	edx, BYTE PTR _curr_byte_idx$6[ebp]
+	sub	edx, DWORD PTR _bytes_on_first_chip$5[ebp]
+	movzx	eax, BYTE PTR _curr_byte_idx$6[ebp]
 	mov	ecx, DWORD PTR _p_read_buffer$3[ebp]
-	mov	esi, DWORD PTR _p_buffer$5[ebp]
+	mov	esi, DWORD PTR _p_buffer$4[ebp]
 	mov	dl, BYTE PTR [esi+edx]
 	mov	BYTE PTR [ecx+eax], dl
-; Line 50
-	movzx	eax, BYTE PTR _curr_byte_idx$9[ebp]
-	mov	ecx, DWORD PTR _p_read_buffer$3[ebp]
-	mov	dl, BYTE PTR [ecx+eax]
-	mov	BYTE PTR _val$6[ebp], dl
-; Line 51
-	mov	al, BYTE PTR _val$6[ebp]
-	mov	BYTE PTR _x$7[ebp], al
-; Line 52
-	movzx	ecx, BYTE PTR _curr_byte_idx$9[ebp]
-	mov	edx, DWORD PTR _p_buffer$5[ebp]
-	movzx	eax, BYTE PTR [edx+ecx]
-	push	eax
-	push	OFFSET $SG4670
-	call	_printf
-	add	esp, 8
-; Line 53
-	mov	cl, BYTE PTR _x$7[ebp]
-	add	cl, 1
-	mov	BYTE PTR _x$7[ebp], cl
-; Line 54
 	jmp	SHORT $LN5@bios_memor
 $LN6@bios_memor:
-; Line 55
+; Line 46
 	jmp	SHORT $end$20
 $LN10@bios_memor:
-; Line 60
-	mov	edx, DWORD PTR _p_mem_stick$[ebp]
-	mov	eax, DWORD PTR [edx+4]
-	mov	ecx, DWORD PTR _chip_idx$[ebp]
-	mov	edx, DWORD PTR [eax+ecx*4]
-	mov	DWORD PTR _p_chip$[ebp], edx
-; Line 61
+; Line 51
+	mov	eax, DWORD PTR _p_mem_stick$[ebp]
+	mov	ecx, DWORD PTR [eax+4]
+	mov	edx, DWORD PTR _chip_idx$[ebp]
+	mov	eax, DWORD PTR [ecx+edx*4]
+	mov	DWORD PTR _p_chip$[ebp], eax
+; Line 52
 	cmp	DWORD PTR _p_chip$[ebp], 0
 	jne	SHORT $LN18@bios_memor
-	push	61					; 0000003dH
-	push	OFFSET $SG4671
-	push	OFFSET $SG4672
+	push	52					; 00000034H
+	push	OFFSET $SG4667
+	push	OFFSET $SG4668
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN18@bios_memor:
-; Line 62
-	mov	ecx, DWORD PTR _p_chip$[ebp]
-	cmp	DWORD PTR [ecx+12], 0
+; Line 53
+	mov	edx, DWORD PTR _p_chip$[ebp]
+	cmp	DWORD PTR [edx+12], 0
 	jne	SHORT $LN19@bios_memor
-	push	62					; 0000003eH
-	push	OFFSET $SG4673
-	push	OFFSET $SG4674
+	push	53					; 00000035H
+	push	OFFSET $SG4669
+	push	OFFSET $SG4670
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN19@bios_memor:
-; Line 64
-	mov	eax, DWORD PTR _p_chip$[ebp]
-	mov	ecx, DWORD PTR [eax+12]
-	add	ecx, DWORD PTR _start_idx$[ebp]
-	mov	DWORD PTR _p_buffer$2[ebp], ecx
-; Line 65
-	mov	edx, DWORD PTR _p_mem_value$[ebp]
-	mov	eax, DWORD PTR _p_buffer$2[ebp]
-	mov	ecx, DWORD PTR [eax]
-	mov	DWORD PTR [edx], ecx
+; Line 55
+	mov	ecx, DWORD PTR _p_chip$[ebp]
+	mov	edx, DWORD PTR [ecx+12]
+	add	edx, DWORD PTR _start_idx$[ebp]
+	mov	DWORD PTR _p_buffer$2[ebp], edx
+; Line 56
+	mov	eax, DWORD PTR _p_mem_value$[ebp]
+	mov	ecx, DWORD PTR _p_buffer$2[ebp]
+	mov	edx, DWORD PTR [ecx]
+	mov	DWORD PTR [eax], edx
 $end$20:
-; Line 69
+; Line 60
 	mov	eax, DWORD PTR _err_code$[ebp]
-; Line 70
+; Line 61
 	pop	esi
 	mov	esp, ebp
 	pop	ebp
 	ret	0
 _bios_memory_read ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT _printf
-_TEXT	SEGMENT
-__Result$ = -8						; size = 4
-__ArgList$ = -4						; size = 4
-__Format$ = 8						; size = 4
-_printf	PROC						; COMDAT
-; File c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h
-; Line 950
-	push	ebp
-	mov	ebp, esp
-	sub	esp, 8
-; Line 953
-	lea	eax, DWORD PTR __Format$[ebp+4]
-	mov	DWORD PTR __ArgList$[ebp], eax
-; Line 954
-	mov	ecx, DWORD PTR __ArgList$[ebp]
-	push	ecx
-	push	0
-	mov	edx, DWORD PTR __Format$[ebp]
-	push	edx
-	push	1
-	call	___acrt_iob_func
-	add	esp, 4
-	push	eax
-	call	__vfprintf_l
-	add	esp, 16					; 00000010H
-	mov	DWORD PTR __Result$[ebp], eax
-; Line 955
-	mov	DWORD PTR __ArgList$[ebp], 0
-; Line 956
-	mov	eax, DWORD PTR __Result$[ebp]
-; Line 957
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-_printf	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT __vfprintf_l
-_TEXT	SEGMENT
-__Stream$ = 8						; size = 4
-__Format$ = 12						; size = 4
-__Locale$ = 16						; size = 4
-__ArgList$ = 20						; size = 4
-__vfprintf_l PROC					; COMDAT
-; File c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h
-; Line 638
-	push	ebp
-	mov	ebp, esp
-; Line 639
-	mov	eax, DWORD PTR __ArgList$[ebp]
-	push	eax
-	mov	ecx, DWORD PTR __Locale$[ebp]
-	push	ecx
-	mov	edx, DWORD PTR __Format$[ebp]
-	push	edx
-	mov	eax, DWORD PTR __Stream$[ebp]
-	push	eax
-	call	___local_stdio_printf_options
-	mov	ecx, DWORD PTR [eax+4]
-	push	ecx
-	mov	edx, DWORD PTR [eax]
-	push	edx
-	call	___stdio_common_vfprintf
-	add	esp, 24					; 00000018H
-; Line 640
-	pop	ebp
-	ret	0
-__vfprintf_l ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT ___local_stdio_printf_options
-_TEXT	SEGMENT
-___local_stdio_printf_options PROC			; COMDAT
-; File c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_stdio_config.h
-; Line 73
-	push	ebp
-	mov	ebp, esp
-; Line 75
-	mov	eax, OFFSET ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 ; `__local_stdio_printf_options'::`2'::_OptionsStorage
-; Line 76
-	pop	ebp
-	ret	0
-___local_stdio_printf_options ENDP
 _TEXT	ENDS
 END

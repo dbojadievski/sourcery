@@ -37,21 +37,12 @@ bios_memory_read ( memory_stick * p_mem_stick, dword addr, dword * p_mem_value )
 		dword bytes_on_first_chip			= ( storage_per_chip - start_idx );
 		byte * p_buffer						= ( byte * ) ( p_chip->p_storage + start_idx );
 		for ( byte curr_byte_idx = 0; curr_byte_idx < bytes_on_first_chip; curr_byte_idx++ )
-		{
 			p_read_buffer [ curr_byte_idx ]	= p_buffer [ curr_byte_idx ];
-			printf ( "Read: %d\n", p_buffer [ curr_byte_idx ] );
-		}
 
 		/* Note(Dino): read the second chip. */
 		p_buffer							= p_mem_stick->p_chips [ chip_idx + 1 ]->p_storage;
 		for ( byte curr_byte_idx			= bytes_on_first_chip; curr_byte_idx < sizeof ( *p_mem_value ); curr_byte_idx++ )
-		{
 			p_read_buffer [ curr_byte_idx ]	= p_buffer [ curr_byte_idx - bytes_on_first_chip ];
-			byte val						= p_read_buffer [ curr_byte_idx ];
-			byte x							= val;
-			printf ( "Read: %d\n", p_buffer [ curr_byte_idx ] );
-			x++;
-		}
 	}
 	else
 		/* Note(Dino): Standard case, reading on one chip only. */
@@ -100,10 +91,7 @@ bios_memory_write ( memory_stick * p_mem_stick, dword addr, dword to_write )
 		byte * p_buffer					= (byte * )( p_chip->p_storage + start_idx );
 		byte * p_to_write				= ( byte * ) ( &to_write );
 		for ( dword idx = 0; idx < bytes_on_first_chip; idx++ )
-		{
 			p_buffer [ idx ]			= p_to_write [ idx ];
-			printf ( "Wrote: %d\n", p_buffer [ idx ] );
-		}
 		
 		/* Note(Dino): Write to the second chip. */
 		dword bytes_on_second_chip		= ( sizeof ( to_write ) - bytes_on_first_chip );
@@ -113,10 +101,7 @@ bios_memory_write ( memory_stick * p_mem_stick, dword addr, dword to_write )
 		assert ( p_chip->p_storage );
 		p_buffer						= p_chip->p_storage;
 		for ( dword currByteIdx			= bytes_on_first_chip; currByteIdx < sizeof ( to_write ); currByteIdx++ )
-		{
 			p_chip->p_storage [ currByteIdx - bytes_on_first_chip ] = p_to_write [ currByteIdx ];
-			printf ( "Wrote: %d\n", p_to_write [ currByteIdx ] );
-		}
 	}
 	else
 		/* Note(Dino): Standard case, writing on one chip only. */

@@ -38,6 +38,7 @@ memory_stick_initialize ( memory_stick * p_mem_stick, byte num_chips )
 		}
 	}
 
+	return err_code;
 }
 
 void
