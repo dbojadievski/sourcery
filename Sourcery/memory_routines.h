@@ -33,4 +33,19 @@ void
 flags_set_word ( word * p_flag, byte pos );
 
 
+bool
+memory_get_bit_from_byte ( byte value, byte pos );
+
+bool
+memory_get_bit_from_byte ( byte value, byte pos );
+
+bool
+memory_get_bit_from_word ( word value, byte pos );
+
+bool
+memory_get_bit_from_dword ( dword value, byte pos );
+
 #define memory_zero(p_memory,size) (memory_set(p_memory,0,size))
+#define memory_is_bit_set(byte,num) (((1 << byte) & num) != 0)
+
+

@@ -118,3 +118,22 @@ memory_set_buffer ( void * p_memory, void * p_set_to, size_t size )
 		p_buff_to_set [ curr_byte_idx ] = p_buff_set_to [ curr_byte_idx ];
 	}
 }
+
+
+bool
+memory_get_bit_from_byte ( byte value, byte pos )
+{
+   return ( ( value >> pos ) & 0x1 );
+}
+
+bool
+memory_get_bit_from_word ( word value, byte pos )
+{
+	return ( ( value >> pos ) & 0x1 );
+}
+
+bool
+memory_get_bit_from_dword ( dword value, byte pos )
+{
+	return ( ( value >> pos ) & 0x1 );
+}

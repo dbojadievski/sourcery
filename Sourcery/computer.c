@@ -1,7 +1,7 @@
 #include "registers.h"
 #include "memory_stick.h"
 #include "computer.h"
-
+#include <stdlib.h>
 #include <assert.h>
 
 void

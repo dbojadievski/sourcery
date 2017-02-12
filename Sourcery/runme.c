@@ -3,25 +3,38 @@
 #include "registers.h"
 #include "memory_stick.h"
 #include "BIOS.h"
+#include "instruction.h"
+#include "decoder.h"
+
 #include <stdlib.h>
 
+#ifdef DEBUG
 void test_bios_memory ( void );
 void test_register_file_initialization ( void );
+void test_is_bit_set ( void );
+void test_decoder ( void );
+#endif
 
 void 
 main ( void )
 {
 
-	/* 
-	 * Welcome to Sourcery!
-	 * The show where we teach you...
-	 * code sorcery.
-	 */
+   /* 
+	* Welcome to Sourcery!
+	* The show where we teach you...
+	* code sorcery.
+	*/
+	#ifdef DEBUG
 	test_bios_memory ( );
 	test_register_file_initialization ( );
+	test_is_bit_set ( );
+	test_decoder ( );
+	#endif
 
+	printf ("Ran Sourcery successfully until the end!\n");
 }
 
+#ifdef DEBUG
 void 
 test_register_file_initialization ( )
 {
@@ -88,3 +101,49 @@ test_bios_memory ( void )
 	assert ( !err );
 	assert ( mem_buff_4 == 0xDEADC0DE );
 }
+
+void test_is_bit_set ( void )
+{
+    /* First test - 8-bit behavour. */
+	byte test_case 						= ( byte ) 0b10000010;
+	
+	byte is_bit_set 					= memory_get_bit_from_byte ( test_case, 0 );
+	assert ( !is_bit_set );
+
+	is_bit_set 							= memory_get_bit_from_byte ( test_case, 1 );
+	assert ( is_bit_set );
+
+	is_bit_set 							= memory_get_bit_from_byte ( test_case, 7 );
+	assert ( is_bit_set );
+
+
+	/* Second test - 16-bit behaviour. */
+	word instruction 					= 0b1000000000000000;
+
+	is_bit_set 							= memory_get_bit_from_word ( instruction, 0 );
+	assert ( !is_bit_set );
+	
+	is_bit_set 							= memory_get_bit_from_word ( instruction, 15 );
+	assert ( is_bit_set );
+	
+	/* Final test - 32-bit behavour. */
+	dword instruction32 				= 0b10000000000000000000000000000001;
+	
+	is_bit_set 							= memory_get_bit_from_dword ( instruction32 , 0 );
+	assert ( is_bit_set );
+
+	is_bit_set 							= memory_get_bit_from_dword ( instruction32, 15 );
+	assert ( !is_bit_set );
+
+	is_bit_set 							= memory_get_bit_from_dword ( instruction32, 31 );
+	assert ( is_bit_set );
+}
+
+void
+test_decoder ( void )
+{
+	/* NOTE(Dino): The following instruction is one byte long, and has 0 parameters.  */
+	word instruction 					= 0b0000000010000000;
+	//printf ("Instruction wordvalue is: %d\n", instruction );	
+}
+#endif

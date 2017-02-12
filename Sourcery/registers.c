@@ -1,5 +1,3 @@
-#pragma once
-
 #include "registers.h"
 #include "memory_routines.h"
 
