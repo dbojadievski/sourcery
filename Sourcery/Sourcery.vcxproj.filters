@@ -39,6 +39,15 @@
     <ClInclude Include="computer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="debug_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_routines.c">
@@ -63,6 +72,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="computer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

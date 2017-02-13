@@ -7,7 +7,7 @@
 #include "decoder.h"
 
 #include <stdlib.h>
-
+#define DEBUG
 #ifdef DEBUG
 void test_bios_memory ( void );
 void test_register_file_initialization ( void );
@@ -143,7 +143,13 @@ void
 test_decoder ( void )
 {
 	/* NOTE(Dino): The following instruction is one byte long, and has 0 parameters.  */
-	word instruction 					= 0b0000000010000000;
-	//printf ("Instruction wordvalue is: %d\n", instruction );	
+	word instruction 					= 0b0000000011111111;
+	instruction_header header;
+	decode_to_header ( ( byte * ) ( &instruction ), &header, sizeof ( word ) );
+	
+	assert ( header.size == 255 );
+	assert ( !header.is_simd );
+	assert ( !header.parameters );
+	assert ( !header.type );
 }
 #endif
