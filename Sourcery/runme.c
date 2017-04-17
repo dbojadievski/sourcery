@@ -3,35 +3,45 @@
 #include "registers.h"
 #include "memory_stick.h"
 #include "BIOS.h"
+#include "alu.h"
 #include "instruction.h"
 #include "decoder.h"
 
 #include <stdlib.h>
+#include <time.h>
 
 #ifdef DEBUG
 void test_bios_memory ( void );
 void test_register_file_initialization ( void );
 void test_is_bit_set ( void );
 void test_decoder ( void );
+void test_alu ( void );
 #endif
 
 void 
 main ( void )
 {
-
    /* 
 	* Welcome to Sourcery!
 	* The show where we teach you...
 	* code sorcery.
 	*/
+
+	clock_t start 						= clock ( );
+	printf ( "Running Sourcery!\n" );
 	#ifdef DEBUG
 	test_bios_memory ( );
 	test_register_file_initialization ( );
 	test_is_bit_set ( );
 	test_decoder ( );
+	test_alu ( );
 	#endif
 
 	printf ("Ran Sourcery successfully until the end!\n");
+
+	clock_t end 						= clock ( );
+	double seconds 						= ( ( double ) ( end - start ) / CLOCKS_PER_SEC );
+	printf ( "Running the program took all of %f seconds.\n", seconds );
 }
 
 #ifdef DEBUG
@@ -145,5 +155,71 @@ test_decoder ( void )
 	/* NOTE(Dino): The following instruction is one byte long, and has 0 parameters.  */
 	word instruction 					= 0b0000000010000000;
 	//printf ("Instruction wordvalue is: %d\n", instruction );	
+}
+
+void
+test_alu_add ( void )
+{
+	byte actual[ 8 ] 					= { 0 };   
+	byte expected[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 1, 1 };
+	byte addend_a[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 0, 1};
+	byte addend_b[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 1, 0 };
+
+	CORE_ERR_CODE err 					= arithmetic_binary_add ( addend_a, addend_b, actual, 8 );
+	assert ( err == CORE_ERR_SUCCESS );
+
+	bool are_equal 						= memory_compare ( actual, expected, 8 );
+	assert ( are_equal );
+}
+
+void test_alu_subtract ( void )
+{
+	byte actual[ 4 ] 					= { 0 };
+	byte expected[ 4 ] 					= { 0, 1, 1, 0 };
+	byte minuend[ 4 ] 					= { 0, 1, 1, 1 };
+	byte subtrahend[ 4 ] 				= { 0, 0, 0, 1 };
+
+	CORE_ERR_CODE err 					= arithmetic_binary_subtract ( minuend, subtrahend, actual, 4 );
+	assert ( err == CORE_ERR_SUCCESS );
+
+	bool are_equal 						= memory_compare ( actual, expected, 4 );
+	assert ( are_equal );
+}
+
+void
+test_alu_invert ( void )
+{
+	byte actual[ 8 ] 					= { 0 };
+	byte expected[ 8 ] 					= { 0 };
+	byte to_invert[ 8 ] 				= { 1, 1, 1, 1, 1, 1, 1, 1 };
+
+	CORE_ERR_CODE err 					= logic_binary_invert ( to_invert, to_invert, 8 );
+	assert ( err == CORE_ERR_SUCCESS );
+
+	bool are_equal 						= memory_compare ( actual, expected, 8 );
+	assert ( are_equal );
+}
+
+void
+test_alu_twos_complement ( void )
+{
+	byte actual[ 8 ] 					= { 0 };
+	byte expected[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 0, 1 };
+	byte param[ 8 ]						= { 1, 1, 1, 1, 1, 1, 1, 1 };
+
+	CORE_ERR_CODE err 					= logic_binary_twos_complement ( param, actual, 8 );
+	assert ( err == CORE_ERR_SUCCESS );
+
+	bool are_equal 						= memory_compare ( actual, expected, 8 );
+	assert ( are_equal );
+}
+
+void
+test_alu ( void )
+{
+	test_alu_add ( );
+	test_alu_invert ( );
+	test_alu_twos_complement ( );
+	test_alu_subtract ( );
 }
 #endif

@@ -32,7 +32,6 @@ flags_set_byte ( byte * p_flag, byte pos );
 void
 flags_set_word ( word * p_flag, byte pos );
 
-
 bool
 memory_get_bit_from_byte ( byte value, byte pos );
 
@@ -44,6 +43,12 @@ memory_get_bit_from_word ( word value, byte pos );
 
 bool
 memory_get_bit_from_dword ( dword value, byte pos );
+
+bool
+memory_compare ( void * p_comparand_a, void * p_comparand_b, size_t size );
+
+void
+memory_print ( void * p_memory, size_t size );
 
 #define memory_zero(p_memory,size) (memory_set(p_memory,0,size))
 #define memory_is_bit_set(byte,num) (((1 << byte) & num) != 0)

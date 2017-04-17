@@ -119,6 +119,28 @@ memory_set_buffer ( void * p_memory, void * p_set_to, size_t size )
 	}
 }
 
+bool
+memory_compare ( void * p_comparand_a, void * p_comparand_b, size_t size )
+{
+	assert ( size );
+	assert ( p_comparand_a );
+	assert ( p_comparand_b );
+
+	bool result 						= 1;
+
+	byte * p_in_a 						= ( byte * ) p_comparand_a;
+	byte * p_in_b 						= ( byte * ) p_comparand_b;
+
+	size_t curr_idx 					= 0;
+	for ( ; curr_idx < size; ++curr_idx )
+		if ( p_in_a[ curr_idx ] != p_in_b[ curr_idx ] )
+		{
+			result 						= 0;
+			break;
+		}
+
+	return result;
+}
 
 bool
 memory_get_bit_from_byte ( byte value, byte pos )
@@ -136,4 +158,18 @@ bool
 memory_get_bit_from_dword ( dword value, byte pos )
 {
 	return ( ( value >> pos ) & 0x1 );
+}
+
+void
+memory_print ( void * p_memory, size_t size )
+{
+	assert ( size );
+	assert ( p_memory );
+
+	byte * p_as_byte 	= ( byte * ) p_memory;
+	
+	size_t curr_idx 	= 0;
+	for ( ; curr_idx < size; ++curr_idx )
+		printf ( "%u", ( p_as_byte[ curr_idx ] != 0 ? 1 : 0 ) );
+	printf ( "\n" );
 }
