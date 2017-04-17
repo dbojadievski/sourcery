@@ -3,7 +3,7 @@
 
 typedef struct instruction_header
 {
-    byte meta;
+    byte size;
     byte parameters;
     byte is_simd;
     byte type; 

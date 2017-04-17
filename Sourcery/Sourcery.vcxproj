@@ -130,6 +130,9 @@
     <ClInclude Include="BIOS.h" />
     <ClInclude Include="computer.h" />
     <ClInclude Include="core_err_code.h" />
+    <ClInclude Include="debug_utils.h" />
+    <ClInclude Include="decoder.h" />
+    <ClInclude Include="instruction.h" />
     <ClInclude Include="memory_chip.h" />
     <ClInclude Include="memory_routines.h" />
     <ClInclude Include="memory_stick.h" />
@@ -138,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="BIOS.c" />
     <ClCompile Include="computer.c" />
+    <ClCompile Include="debug_utils.c" />
+    <ClCompile Include="decoder.c" />
     <ClCompile Include="memory_chip.c" />
     <ClCompile Include="memory_routines.c" />
     <ClCompile Include="memory_stick.c" />
