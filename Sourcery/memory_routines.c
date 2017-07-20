@@ -1,7 +1,10 @@
-#include "basic_types.h"
 #include <assert.h>
 #include <stdio.h>
 #include <math.h>
+#include <malloc.h>
+
+#include "basic_types.h"
+#include "memory_routines.h"
 
 byte
 memory_get_byte ( void * p_memory, dword idx )
@@ -172,4 +175,16 @@ memory_print ( void * p_memory, size_t size )
 	for ( ; curr_idx < size; ++curr_idx )
 		printf ( "%u", ( p_as_byte[ curr_idx ] != 0 ? 1 : 0 ) );
 	printf ( "\n" );
+}
+
+
+byte *
+memory_allocate ( size_t size )
+{
+	byte * p_buffer		= 0;
+	
+	p_buffer			= ( size < CORE_TRESHOLD_MALLOC ) ? ( ( byte * ) alloca ( size ) ) : ( ( byte * ) malloc ( size ) );
+	assert ( p_buffer );
+	
+	return p_buffer;
 }

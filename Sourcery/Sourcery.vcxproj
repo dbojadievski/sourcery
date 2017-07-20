@@ -126,6 +126,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="alu.h" />
     <ClInclude Include="basic_types.h" />
     <ClInclude Include="BIOS.h" />
     <ClInclude Include="computer.h" />
@@ -139,6 +140,7 @@
     <ClInclude Include="registers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="alu.c" />
     <ClCompile Include="BIOS.c" />
     <ClCompile Include="computer.c" />
     <ClCompile Include="debug_utils.c" />

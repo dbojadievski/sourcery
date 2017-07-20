@@ -11,7 +11,7 @@ decode_to_header ( byte * p_instruction, instruction_header * p_dest, size_t ins
  * @Author: Dino
  * @Param p_instruction: A pointer to the raw instruction byte array. Must be 2 bytes long or more, 
  * as per the specification of the instruction format.
- * @Param p_dest: A pointer to the instruction header to set. Shall be cleared to zero beforehand. Must be a valid pointer.
+ * @Param p_dest: A pointer to the instruction header to set. Shall be cleared to zero beforehand.
  * The parse begins at bit (0), e.g the instruction is assumed to have end with two cleared bits.
  * NOTE(Dino):
  * The instruction header format is as specified: 

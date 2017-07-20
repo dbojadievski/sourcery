@@ -2,6 +2,8 @@
 #include "basic_types.h"
 #include <stdio.h>
 
+#define CORE_TRESHOLD_MALLOC 512
+
 byte
 memory_get_byte ( void * p_memory, dword idx );
 
@@ -49,6 +51,9 @@ memory_compare ( void * p_comparand_a, void * p_comparand_b, size_t size );
 
 void
 memory_print ( void * p_memory, size_t size );
+
+byte * 
+memory_allocate ( size_t size );
 
 #define memory_zero(p_memory,size) (memory_set(p_memory,0,size))
 #define memory_is_bit_set(byte,num) (((1 << byte) & num) != 0)

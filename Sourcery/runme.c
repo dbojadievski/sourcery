@@ -8,12 +8,9 @@
 #include "decoder.h"
 
 #include <stdlib.h>
-<<<<<<< HEAD
 #include <time.h>
 
-=======
 #define DEBUG
->>>>>>> aeb8f57511c8b4df5e162d3e65968d120b35b167
 #ifdef DEBUG
 void test_bios_memory ( void );
 void test_register_file_initialization ( void );
@@ -154,18 +151,35 @@ void test_is_bit_set ( void )
 }
 
 void
-test_decoder ( void )
+test_decoder_instruction_set ( void )
 {
-	/* NOTE(Dino): The following instruction is one byte long, and has 0 parameters.  */
-	word instruction 					= 0b0000000011111111;
+	word instruction					= 0b0000000011111111;
 	instruction_header header;
 	decode_to_header ( ( byte * ) ( &instruction ), &header, sizeof ( word ) );
-	
+}
+
+
+void
+test_decoder_decode_to_header ( )
+{
+	/* NOTE(Dino): The following instruction is one byte long, and has 0 parameters.  */
+	word instruction = 0b0000000011111111;
+	instruction_header header;
+	decode_to_header ( ( byte * ) ( &instruction ), &header, sizeof ( word ) );
+
 	assert ( header.size == 255 );
 	assert ( !header.is_simd );
 	assert ( !header.parameters );
 	assert ( !header.type );
 }
+
+void
+test_decoder ( void )
+{
+	test_decoder_decode_to_header ( );
+	test_decoder_instruction_set ( );
+}
+
 
 void
 test_alu_add ( void )
@@ -213,6 +227,7 @@ test_alu_invert ( void )
 void
 test_alu_twos_complement ( void )
 {
+	//TODO(Dino): Bug here. Fix.
 	byte actual[ 8 ] 					= { 0 };
 	byte expected[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 0, 1 };
 	byte param[ 8 ]						= { 1, 1, 1, 1, 1, 1, 1, 1 };
