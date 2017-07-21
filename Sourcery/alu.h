@@ -2,39 +2,6 @@
 #include "core_err_code.h"
 #include <stddef.h>
 
-/* * * * * * * * * * * * * * * * B I N A R Y * * * * * * * * * * * * * * * * * * * */
-CORE_ERR_CODE 
-arithmetic_binary_add ( byte * p_addend_a, byte * p_addend_b, byte * p_result, size_t size );
-
-CORE_ERR_CODE
-arithmetic_binary_subtract ( byte * p_minuend, byte * p_subtrahend, byte * p_result, size_t size );
-
-CORE_ERR_CODE
-arithmetic_binary_multiply ( byte *, byte *, byte *, size_t size );
-
-CORE_ERR_CODE
-logic_binary_shift_left ( byte *, size_t, byte * );
-
-CORE_ERR_CODE
-logic_binary_shift_right ( byte *, size_t, byte * );
-
-
-CORE_ERR_CODE
-logic_binary_is_zero ( byte *, bool *, size_t );
-
-CORE_ERR_CODE
-logic_binary_is_positive ( byte *, bool *, size_t );
-
-CORE_ERR_CODE
-logic_binary_is_negative ( byte *, bool *, size_t );
-
-CORE_ERR_CODE
-logic_binary_invert ( byte * p_to_invert, byte * p_result, size_t size );
-
-CORE_ERR_CODE
-logic_binary_twos_complement ( byte * p_param, byte * p_result, size_t size );
-/* * * * * * * * * * * * * * * * B I N A R Y * * * * * * * * * * * * * * * * * * * */
-
 /* * * * * * * * * * * * * * * * D E C I M A L * * * * * * * * * * * * * * * * * * */
 CORE_ERR_CODE
 arithmetic_decimal_add ( word a, word b, word * p_result );

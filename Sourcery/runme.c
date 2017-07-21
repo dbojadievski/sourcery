@@ -180,71 +180,8 @@ test_decoder ( void )
 	test_decoder_instruction_set ( );
 }
 
-
-void
-test_alu_add ( void )
-{
-	byte actual[ 8 ] 					= { 0 };   
-	byte expected[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 1, 1 };
-	byte addend_a[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 0, 1};
-	byte addend_b[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 1, 0 };
-
-	CORE_ERR_CODE err 					= arithmetic_binary_add ( addend_a, addend_b, actual, 8 );
-	assert ( err == CORE_ERR_SUCCESS );
-
-	bool are_equal 						= memory_compare ( actual, expected, 8 );
-	assert ( are_equal );
-}
-
-void test_alu_subtract ( void )
-{
-	byte actual[ 4 ] 					= { 0 };
-	byte expected[ 4 ] 					= { 0, 1, 1, 0 };
-	byte minuend[ 4 ] 					= { 0, 1, 1, 1 };
-	byte subtrahend[ 4 ] 				= { 0, 0, 0, 1 };
-
-	CORE_ERR_CODE err 					= arithmetic_binary_subtract ( minuend, subtrahend, actual, 4 );
-	assert ( err == CORE_ERR_SUCCESS );
-
-	bool are_equal 						= memory_compare ( actual, expected, 4 );
-	assert ( are_equal );
-}
-
-void
-test_alu_invert ( void )
-{
-	byte actual[ 8 ] 					= { 0 };
-	byte expected[ 8 ] 					= { 0 };
-	byte to_invert[ 8 ] 				= { 1, 1, 1, 1, 1, 1, 1, 1 };
-
-	CORE_ERR_CODE err 					= logic_binary_invert ( to_invert, to_invert, 8 );
-	assert ( err == CORE_ERR_SUCCESS );
-
-	bool are_equal 						= memory_compare ( actual, expected, 8 );
-	assert ( are_equal );
-}
-
-void
-test_alu_twos_complement ( void )
-{
-	//TODO(Dino): Bug here. Fix.
-	byte actual[ 8 ] 					= { 0 };
-	byte expected[ 8 ] 					= { 0, 0, 0, 0, 0, 0, 0, 1 };
-	byte param[ 8 ]						= { 1, 1, 1, 1, 1, 1, 1, 1 };
-
-	CORE_ERR_CODE err 					= logic_binary_twos_complement ( param, actual, 8 );
-	assert ( err == CORE_ERR_SUCCESS );
-
-	bool are_equal 						= memory_compare ( actual, expected, 8 );
-	assert ( are_equal );
-}
-
 void
 test_alu ( void )
 {
-	test_alu_add ( );
-	test_alu_invert ( );
-	test_alu_twos_complement ( );
-	test_alu_subtract ( );
 }
 #endif
